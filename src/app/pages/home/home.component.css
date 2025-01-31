@@ -1,0 +1,479 @@
+/* home.component.css */
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/* =========== HERO SECTION =========== */
+.hero-section {
+  position: relative;
+  background: url('https://via.placeholder.com/1920x1080?text=GYM+Background') center/cover no-repeat;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light-color);
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background-color: var(--primary-color);
+  color: var(--text-light-color);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+/* =========== ANIMATIONS =========== */
+.animate-fade-in-down {
+  animation: fadeInDown 1s ease forwards;
+}
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.5s;
+}
+.animate-scale-up {
+  animation: scaleUp 1s ease forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* =========== WHY CHOOSE US =========== */
+.why-choose-us {
+  padding: 2rem;
+  text-align: center;
+}
+
+.why-choose-us h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.feature-card {
+  background-color: var(--accent-bg-color);
+  padding: 2rem;
+  border-radius: 8px;
+  width: 300px;
+  transition: box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  box-shadow: 0 4px 15px var(--box-shadow-color);
+}
+
+.feature-card i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.feature-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* =========== OUR PROGRAMS =========== */
+.programs-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.programs-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.programs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.program-card {
+  background-color: var(--card-bg-color);
+  border-radius: 8px;
+  width: 300px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px var(--box-shadow-color);
+}
+
+.program-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.program-info {
+  padding: 1rem;
+}
+
+.program-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* =========== OUR CLASSES =========== */
+.classes-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.classes-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.classes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.class-card {
+  background-color: var(--card-bg-color);
+  border-radius: 8px;
+  width: 300px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.class-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px var(--box-shadow-color);
+}
+
+.class-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+/* =========== OUR TRAINERS =========== */
+.trainers-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.trainers-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.trainers-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.trainer-card {
+  background-color: var(--card-bg-color);
+  border-radius: 8px;
+  width: 200px;
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.trainer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px var(--box-shadow-color);
+}
+
+.trainer-card img {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.trainer-card h4 {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+/* =========== PRICING SECTION =========== */
+.pricing-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.pricing-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.pricing-section p {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.pricing-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.pricing-card {
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--border-color-alt);
+  border-radius: 8px;
+  padding: 2rem;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px var(--box-shadow-color);
+}
+
+.pricing-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.pricing-card .price {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.pricing-card .price span {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.pricing-card ul li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.pricing-card button {
+  background-color: var(--primary-color);
+  color: var(--text-light-color);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.pricing-card button:hover {
+  background-color: var(--primary-hover);
+}
+
+.pricing-card.featured {
+  border: 2px solid var(--primary-color);
+}
+
+/* =========== CTA BANNER =========== */
+.cta-banner {
+  background-color: var(--primary-color);
+  color: var(--text-light-color);
+  padding: 2rem;
+  text-align: center;
+}
+
+.cta-banner .banner-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-banner h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-banner p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.cta-banner .cta-button {
+  background-color: var(--secondary-color);
+  color: var(--text-light-color);
+}
+
+.cta-banner .cta-button:hover {
+  background-color: var(--secondary-hover);
+}
+
+/* =========== CONTACT SECTION =========== */
+.contact-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-section p {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.contact-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-button {
+  align-self: flex-start;
+  background-color: var(--primary-color);
+  color: var(--text-light-color);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-button:hover {
+  background-color: var(--primary-hover);
+}
+
+/* =========== RESPONSIVE BREAKPOINT =========== */
+@media (max-width: 768px) {
+  .features-container,
+  .programs-container,
+  .classes-container,
+  .trainers-container,
+  .pricing-cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section {
+    height: 65vh;
+  }
+
+  .program-card,
+  .feature-card,
+  .trainer-card,
+  .class-card,
+  .pricing-card {
+    width: 80%;
+    max-width: 400px;
+  }
+}

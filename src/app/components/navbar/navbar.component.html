@@ -1,0 +1,29 @@
+<nav class="navbar">
+  <div class="navbar-brand">
+    <a routerLink="/">GYM FITNESS</a>
+  </div>
+
+  <div class="navbar-links" [class.open]="menuOpen">
+    <a href="#hero-section">Home</a>
+    <a href="#programs">Programs</a>
+    <a href="#trainers">Trainers</a>
+    <a href="#classes">Classes</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <div class="navbar-actions">
+    <!-- Dark Mode Toggle -->
+    <label class="switch">
+      <input type="checkbox" (change)="toggleDarkMode()" />
+      <span class="slider"></span>
+    </label>
+
+    <!-- Hamburger Icon -->
+    <button class="hamburger" (click)="toggleMenu()">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </div>
+</nav>

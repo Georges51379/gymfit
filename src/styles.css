@@ -1,1 +1,69 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* so the content can stretch the full view height */
+}
+
+/* This pushes the footer to the bottom if content is short */
+.content {
+  flex: 1; /* take up remaining space */
+  padding: 1rem; /* optional padding */
+}
+
+footer {
+  flex-shrink: 0; /* ensures footer stays at bottom */
+}
+
+
+.dark-theme {
+    background-color: #121212;
+    color: #f5f5f5;
+  }
+  
+  .dark-theme a {
+    color: #f5f5f5;
+  }
+  
+  .dark-theme .navbar {
+    background-color: #1f1f1f;
+  }
+  
+
+
+
+  :root {
+    /* Primary brand colors */
+    --primary-color: #ff6b00;      /* e.g., orange shade */
+    --primary-hover: #e85c00;
+  
+    /* Secondary / complementary colors */
+    --secondary-color: #333;
+    --secondary-hover: #444;
+  
+    /* Basic background, card, accent */
+    --light-bg-color: #fafafa;     /* Light background */
+    --accent-bg-color: #f8f8f8;    /* Accent background */
+    --card-bg-color: #fff;         /* White for cards */
+  
+    /* Text colors */
+    --text-color: #333;
+    --text-light-color: #fff;
+    --text-secondary: #666;        /* Slightly lighter text */
+  
+    /* Border and shadow */
+    --border-color: #ccc;
+    --border-color-alt: #eee;
+    --box-shadow-color: rgba(0, 0, 0, 0.1);
+  }
+  
