@@ -14,6 +14,15 @@ export class NavbarComponent {
   menuOpen: boolean = false;
   isDarkMode: boolean = false;
 
+  ngOnInit(): void {
+    const savedTheme = localStorage.getItem('theme'); 
+  
+    if (savedTheme === 'dark') {
+      this.isDarkMode = true;
+      document.body.classList.add('dark-theme');
+    }
+  }
+
   constructor(private eRef: ElementRef) {}
 
   toggleMenu() {
@@ -22,20 +31,18 @@ export class NavbarComponent {
 
   toggleDarkMode() {
     this.isDarkMode = !this.isDarkMode;
+    
     if (this.isDarkMode) {
       document.body.classList.add('dark-theme');
+      localStorage.setItem('theme', 'dark');
     } else {
       document.body.classList.remove('dark-theme');
+      localStorage.setItem('theme', 'light');
     }
   }
 
-  /**
-   * Close the navbar if user clicks outside of it.
-   */
   @HostListener('document:click', ['$event'])
   clickOutside(event: MouseEvent) {
-    // Only close the menu if it's currently open AND
-    // the clicked target is not inside this component
     if (this.menuOpen && !this.eRef.nativeElement.contains(event.target)) {
       this.menuOpen = false;
     }
