@@ -54,7 +54,8 @@ footer {
     /* Basic background, card, accent */
     --light-bg-color: #fafafa;     /* Light background */
     --accent-bg-color: #f8f8f8;    /* Accent background */
-    --card-bg-color: #fff;         /* White for cards */
+    --card-bg-color: #fff;  
+    --accent-color: red;      /* White for cards */
   
     /* Text colors */
     --text-color: #333;
